@@ -2,14 +2,14 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: 'http://localhost:8000/api',
+  baseURL: import.meta.env.VITE_API_URL + '/api',
   headers: {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
   },
+  withCredentials: true // penting!
 });
 
-// Tambah token dari localStorage
 apiClient.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
   if (token) {
