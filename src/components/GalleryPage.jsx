@@ -1,6 +1,8 @@
 // src/components/GalleryPage.jsx
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import img1 from '../assets/gallery/pertanian.jpg';
 import img2 from '../assets/gallery/sawah.jpg';
 import img3 from '../assets/gallery/pantai.jpg';
