@@ -52,10 +52,11 @@ export default function PublicationListPage() {
           <thead className="text-xs text-white uppercase bg-slate-700">
             <tr>
               <th scope="col" className="px-6 py-3 text-center w-16">No</th>
-              <th scope="col" className="px-6 py-3">Judul</th>
-              <th scope="col" className="px-6 py-3">Tanggal Rilis</th>
-              <th scope="col" className="px-6 py-3 text-center">Sampul</th>
-              <th scope="col" className="px-6 py-3 text-center">Aksi</th>
+              <th scope="col" className="px-6 py-3 text-center w 40">Judul</th>
+              <th scope="col" className="px-6 py-3 text-center w-120">Deskripsi</th>
+              <th scope="col" className="px-6 py-3 text-center w-30">Tanggal Rilis</th>
+              <th scope="col" className="px-6 py-3 text-center w-30">Sampul</th>
+              <th scope="col" className="px-6 py-3 text-center w-45">Aksi</th>
             </tr>
           </thead>
           <tbody>
@@ -64,6 +65,7 @@ export default function PublicationListPage() {
                 <tr key={pub.id} className="bg-white border-b hover:bg-gray-50 transition-colors duration-200">
                   <td className="px-6 py-4 font-medium text-gray-900 text-center">{idx + 1}</td>
                   <td className="px-6 py-4 font-semibold text-gray-800">{pub.title}</td>
+                  <td className="px-6 py-4">{pub.description}</td>
                   <td className="px-6 py-4 text-gray-600">{pub.releaseDate}</td>
                   <td className="px-6 py-4 flex justify-center items-center">
                     <img
